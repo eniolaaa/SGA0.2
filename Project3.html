@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #cccccc;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #aaaaaa;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://dsw.scene7.com/is/image/DSWShoes/404995_001_ss_01?$colpg$");
+}
+.second{
+  background-image: url("https://i.pinimg.com/736x/62/ed/96/62ed964f17fe69401c87feafee1ec8b7--green-high-heels-green-shoes.jpg");
+}
+.third{
+  background-image: url("http://s3-ap-southeast-2.amazonaws.com/bettss3/images/002inax04_w600_h600.jpg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Kaodi Store</h1>
+<h2>Love it. Wear it.</h2>
+<div class="first">
+  <p>Classic Vans Sneakers<span class="price">9,500</span><br />
+  <small>Effortlessly casual yet stylish sneakers, can be worn by both male and female, perfect with jean or any other casual outfit.</small></p>
+</div>
+
+<div class="second">
+  <p>Green strappy heels<span class="price">10,000</span><br />
+  <small>This strappy velvet shoes is a must have for every elegant female, this 6-inch heels is perfect for a date night.</small></p>
+</div>
+  
+<div class="third">
+  <p>Black Block Heels<span class="price">8,000</span><br />
+  <small>This black block heels is super comfortable, yet stylish, can be worn with any outfit. Can be paired with a casual outfit or a corporate one.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
